@@ -17,22 +17,30 @@ MainFrame::MainFrame(const wxString& title): wxFrame(nullptr, wxID_ANY, title)
    //add a button control to panel
    [[maybe_unused]] auto button = new wxButton( panel,
                                    wxID_ANY,
-                                   "Button",
+                                   "Press Here",
                                    wxPoint(150,50),
-                                   wxSize(100,35));
+                                   wxSize(100,35),
+                                   wxBU_EXACTFIT);
 
    //add a checkbox control to panel
    [[maybe_unused]] auto checkBox = new wxCheckBox( panel,
                                    wxID_ANY,
                                    "Check Box",
                                    wxPoint(550, 55),
-                                   wxDefaultSize);
+                                   wxDefaultSize,
+                                   wxCHK_3STATE | wxCHK_ALLOW_3RD_STATE_FOR_USER); //binary OR styles to combine
 
    //add static text to panel
+   //though it is often best to use wxDefault size OR wxSize(-1, -1),
+   //using other choices and styles can have a good effect on display
    [[maybe_unused]] auto staticText = new wxStaticText(panel,
                                       wxID_ANY,
                                       "Static text - NOT editable",
-                                      wxPoint(120, 150));
+                                      wxPoint(120, 150),
+                                      wxSize(300, -1),
+                                      wxALIGN_CENTER);
+
+   staticText->SetBackgroundColour(*wxLIGHT_GREY); //must be pointer to color
 
    //add a text control box (input??) to panel
    [[maybe_unused]] auto textCtrl = new wxTextCtrl(panel,
