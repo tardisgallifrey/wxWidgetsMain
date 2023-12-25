@@ -22,6 +22,7 @@ MainFrame::MainFrame(const wxString& title): wxFrame(nullptr, wxID_ANY, title)
                                    wxSize(100,35),
                                    wxBU_EXACTFIT);
 
+
    //add a checkbox control to panel
    [[maybe_unused]] auto checkBox = new wxCheckBox( panel,
                                    wxID_ANY,
