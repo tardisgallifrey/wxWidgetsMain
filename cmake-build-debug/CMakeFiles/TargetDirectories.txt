@@ -1,0 +1,3 @@
+/home/tardis1/wxWidgets_projects/firstapp/cmake-build-debug/CMakeFiles/firstapp.dir
+/home/tardis1/wxWidgets_projects/firstapp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tardis1/wxWidgets_projects/firstapp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
